@@ -2,12 +2,6 @@ trigger:
 - master
 
 steps:
-- task: Docker@2
-  inputs:
-    containerRegistry: 'azzkacr'
-    repository: 'nginx-echo-headers'
-    command: 'buildAndPush'
-    tags: 'latest'
 - task: Kubernetes@1
   inputs:
     connectionType: 'Azure Resource Manager'
